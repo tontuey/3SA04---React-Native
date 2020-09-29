@@ -34,6 +34,7 @@ export default function Weather(props) {
 
 
     return (
+    
         <View>
             <ImageBackground source={require('../bg.jpg')} style={styles.backdrop}>
                 <View style={styles.cover}>
@@ -61,5 +62,6 @@ const styles = StyleSheet.create({
     medium: {
         fontSize: 20,
         color: '#FFF',
-    }
+    },
+    
 });

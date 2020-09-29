@@ -30,5 +30,6 @@ const styles = StyleSheet.create({
         color: '#FFF',
         marginTop: 20,
 
+        
     }
 })
