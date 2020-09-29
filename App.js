@@ -1,19 +1,17 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import ZipCodeScreen from './components/ZipCodeScreen';
-import WeatherScreen from './components/WeatherScreen';
+import { Router, Scene } from 'react-native-router-flux';
+import Interface from './components/Interface';
+import Icon from './components/Icon';
 
-const Stack = createStackNavigator();
 
 export default function App() {
   return (        
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={ZipCodeScreen} />
-        <Stack.Screen name="Weather" component={WeatherScreen} />
-      </Stack.Navigator> 
-    </NavigationContainer>       
+    <Router>
+      <Scene key='root'>
+        <Scene key="Icon" component={Icon} />
+        <Scene key="Interface" component={Interface} />
+        
+      </Scene>
+    </Router>       
   );
 }

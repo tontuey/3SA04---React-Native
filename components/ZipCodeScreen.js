@@ -1,4 +1,5 @@
 import React from 'react';
+import { StyleSheet } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { View, Text, FlatList, TouchableHighlight } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
@@ -36,4 +37,30 @@ export default function ZipCodeScreen() {
         </View>
     );
 
+    
+
 }
+
+const styles = StyleSheet.create({
+    flex: {   
+        display: 'flex',    
+        flexDirection: 'row', 
+        justifyContent: 'space-between',
+        paddingLeft: 20,
+        paddingRight:20,
+        margin:30
+        
+        
+    },
+    text: {
+        color: 'black',
+        textAlign: 'center',
+       
+    },
+    backdrop: {
+        width: '100%',
+        height: '100%'
+    },
+    
+   
+})
