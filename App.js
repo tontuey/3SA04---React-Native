@@ -10,7 +10,6 @@ export default function App() {
       <Scene key='root'>
         <Scene key="Icon" component={Icon} />
         <Scene key="Interface" component={Interface} />
-        
       </Scene>
     </Router>       
   );
