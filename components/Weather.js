@@ -10,6 +10,7 @@ export default function Weather(props) {
         main: 'main',
         description: 'description',
         temp: 0,
+        icon:' ',
     })
 
     useEffect(() => {
@@ -19,10 +20,12 @@ export default function Weather(props) {
             fetch(`http://api.openweathermap.org/data/2.5/weather?q=${props.zipCode},th&units=metric&APPID=${apiKey}`)
                 .then((response) => response.json())
                 .then((json) => {
+                    console.log(json.weather[0])
                     setForecastInfo({
                         main: json.weather[0].main,
                         description: json.weather[0].description,
-                        temp: json.main.temp
+                        temp: json.main.temp,
+                        icon: json.weather[0].icon
                     });
                 })
                 .catch((error) => {
@@ -54,7 +57,7 @@ const styles = StyleSheet.create({
     cover: {
         backgroundColor: '#000',
         width: '100%',
-        height: 300,
+        height: 350,
         opacity: 0.5,
         justifyContent: 'center',
         alignItems: 'center',

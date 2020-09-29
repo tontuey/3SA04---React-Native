@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet,Image} from 'react-native';
 
 export default function Forecast(props) {
     return (
@@ -9,8 +9,9 @@ export default function Forecast(props) {
             <View>
                 <Text style={styles.medium}>
                     <Text style={{fontSize: 40}}>{props.temp}</Text>
-                    <Text> °C</Text>
+                    <Text> °C</Text>    
                 </Text>
+                <Image style={styles.smalling} source={{uri: 'http://openweathermap.org/img/wn/'+props.icon+'@2x.png'}}/>
             </View>
         </View>
     );
@@ -31,5 +32,8 @@ const styles = StyleSheet.create({
         marginTop: 20,
 
         
-    }
+    },
+    smalling :{width:100,
+              height:100,
+            },
 })
